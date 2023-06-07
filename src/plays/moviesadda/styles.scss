@@ -1,0 +1,55 @@
+// MovieCard.scss
+.movie-card {
+  display: gird;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    max-width: 800px;
+    margin: 16px auto;
+  }
+
+  &__poster {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  &__info {
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      margin-left: 16px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  &__genre,
+  &__rating {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 4px;
+  }
+
+  &__description {
+    font-size: 16px;
+  }
+}
+
+.pagination {
+  display: contents;
+  font-size: 24px;
+}
