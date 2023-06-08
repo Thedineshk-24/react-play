@@ -1,5 +1,4 @@
 # movies-adda
-
 this web app shows movies related information.
 
 ## Play Demographic

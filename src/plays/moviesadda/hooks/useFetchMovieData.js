@@ -8,7 +8,9 @@ const useMovieData = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
+
         setIsLoading(true);
+
         const response = await fetch(
           `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_MOVIES_API_KEY}&page=${page}`
         );
@@ -21,7 +23,9 @@ const useMovieData = () => {
           poster: `https://image.tmdb.org/t/p/original/${movie?.poster_path}`
         }));
         setMovies((prevMovies) => [...prevMovies, ...formattedData]);
+
         setIsLoading(false);
+        
       } catch (error) {
         console.error('Error fetching movie data:', error);
         setIsLoading(false);
